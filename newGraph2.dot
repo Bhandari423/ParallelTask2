@@ -1,0 +1,21 @@
+digraph {
+9 [label="name I"];
+4 [label="name D"];
+8 [label="name H"];
+6 [label="name F"];
+7 [label="name G"];
+1 [label="name A"];
+5 [label="name E"];
+2 [label="name B"];
+3 [label="name C"];
+9 -> 4 [label="1"];
+4 -> 8 [label="1"];
+8 -> 4 [label="1"];
+8 -> 6 [label="1"];
+6 -> 8 [label="1"];
+6 -> 7 [label="1"];
+1 -> 7 [label="1"];
+1 -> 5 [label="1"];
+5 -> 2 [label="1"];
+2 -> 5 [label="1"];
+}

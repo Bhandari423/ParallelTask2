@@ -1,0 +1,7 @@
+digraph {
+1 [label="name A"];
+4 [label="name D"];
+5 [label="name E"];
+4 -> 1 [label="1"];
+4 -> 5 [label="1"];
+}
