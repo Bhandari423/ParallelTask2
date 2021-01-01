@@ -55,9 +55,10 @@ db.atomic(newGraph, db.connect_nodes(9, 2, {'value': 1}))
 db.atomic(newGraph, db.connect_nodes(9, 3, {'value': 1}))
 db.atomic(newGraph, db.connect_nodes(9, 4, {'value': 1}))
 
-#A:1,D:4,E:5
-db.visualize(newGraph, 'newGraph.dot', [1, 4, 5], exclude_node_keys=['value'], hide_edge_key=True)
+# A:1,D:4,E:5
+res1 = db.traverse(newGraph, 1, [4,5], neighbors_fn=db.find_neighbors)
+db.visualize(newGraph, 'newGraph.dot', res1, exclude_node_keys=['value'], hide_edge_key=True)
 
-#I:9
-res = db.traverse(newGraph, 9, neighbors_fn=db.find_outbound_neighbors)
-db.visualize(newGraph, 'newGraph2.dot', res,exclude_node_keys=['value'], hide_edge_key=True)
+# I:9
+res2 = db.traverse(newGraph, 9, neighbors_fn=db.find_outbound_neighbors)
+db.visualize(newGraph, 'newGraph2.dot', res2,exclude_node_keys=['value'], hide_edge_key=True)
